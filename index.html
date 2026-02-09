@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kito, Be My Valentine 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      max-width: 350px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .heart {
+      font-size: 60px;
+      animation: beat 1s infinite;
+      margin: 15px 0;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    button {
+      background: white;
+      color: #ff4d6d;
+      border: none;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ffe6eb;
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+
+    /* Hide the music player */
+    iframe {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <iframe
+    src="https://www.youtube.com/embed/INvrv9ppxvQ?autoplay=1&loop=1&playlist=INvrv9ppxvQ"
+    allow="autoplay">
+  </iframe>
+
+  <div class="card">
+    <h1>Kito Kifile 💕</h1>
+    <h2>Will you be my Valentine?</h2>
+
+    <div class="heart">❤️</div>
+
+    <button onclick="sayYes()">YES ❤️</button>
+    <button onclick="sayYes()">OF COURSE 😍</button>
+
+    <div id="message" class="hidden">
+      🥰 Yay! You just made my heart very happy.<br>
+      Nothing is gonna change my love for you ❤️
+    </div>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
